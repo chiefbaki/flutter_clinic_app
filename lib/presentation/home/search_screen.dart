@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_6/presentation/home/doctors_page.dart';
+import 'package:flutter_application_6/data/model/model.dart';
+import 'package:flutter_application_6/presentation/home/about_doctor_page.dart';
 import 'package:flutter_application_6/presentation/theme/app_colors.dart';
 import 'package:flutter_application_6/presentation/theme/app_fonts.dart';
 import 'package:flutter_application_6/presentation/widgets/choice_chip.dart';
@@ -176,8 +177,9 @@ class _SearchScreenState extends State<SearchScreen> {
           ),
           Container(
             decoration: const BoxDecoration(
-              color: AppColors.listTileBackground // Background color for the Container
-            ),
+                color: AppColors
+                    .listTileBackground // Background color for the Container
+                ),
             padding: const EdgeInsets.all(10),
             height: MediaQuery.of(context).size.height * 0.5,
             child: ListView.separated(
@@ -188,42 +190,23 @@ class _SearchScreenState extends State<SearchScreen> {
                   width: 335.w,
                   color: Colors.white, // Background color for the ListTile
                   child: InkWell(
-                    onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => const DoctorsPage()));
-                    },
-                    child: ListTile(
-                      leading: Image.asset(AppImg.maskGroup1),
-                      title: Text(employee[index]["title"]),
-                      subtitle: Text(employee[index]["subtitle"]),
-                      trailing: const Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Icon(Icons.star_border),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              Text("5.0")
-                            ],
-                          ),
-                          SizedBox(
-                            width: 24,
-                          ),
-                          Column(
-                            children: [
-                              Icon(Icons.comment),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              Text("12")
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => AboutDoctor(
+                                    name: DoctorsData.doctorsData[index].name,
+                                    specialty: DoctorsData
+                                        .doctorsData[index].specialty,
+                                    raiting:
+                                        DoctorsData.doctorsData[index].raiting,
+                                    info:
+                                        DoctorsData.doctorsData[index].info,
+                                    img: DoctorsData.doctorsData[index].image,)));
+                      },
+                      child: ListTileData(
+                        model: DoctorsData.doctorsData[index],
+                      )),
                 );
               },
               separatorBuilder: (context, index) {
@@ -231,9 +214,50 @@ class _SearchScreenState extends State<SearchScreen> {
                   height: 8,
                 );
               },
-              itemCount: employee.length,
+              itemCount: DoctorsData.doctorsData.length,
             ),
           ),
+        ],
+      ),
+    );
+  }
+}
+
+class ListTileData extends StatelessWidget {
+  final DoctorsModel model;
+  const ListTileData({super.key, required this.model});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: Image.asset(AppImg.maskGroup1),
+      title: Text(model.specialty),
+      subtitle: Text(model.name),
+      trailing: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const Icon(Icons.star_border),
+              const SizedBox(
+                height: 5,
+              ),
+              Text(model.raiting.toString())
+            ],
+          ),
+          const SizedBox(
+            width: 24,
+          ),
+          const Column(
+            children: [
+              Icon(Icons.comment),
+              SizedBox(
+                height: 5,
+              ),
+              Text("12")
+            ],
+          )
         ],
       ),
     );
