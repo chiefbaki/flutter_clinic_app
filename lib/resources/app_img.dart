@@ -3,12 +3,15 @@ part of 'resources.dart';
 class AppImg {
   AppImg._();
 
+  static const String img1 = 'assets/imgs/1.png';
+  static const String img2 = 'assets/imgs/2.png';
+  static const String img3 = 'assets/imgs/3.png';
   static const String group = 'assets/imgs/Group.svg';
-  static const String maskGroup = 'assets/imgs/Mask Group.png';
-  static const String maskGroup4 = 'assets/imgs/Mask _Group4.png';
+  static const String maskGroup = 'assets/imgs/MaskGroup.png';
   static const String maskGroup1 = 'assets/imgs/MaskGroup1.png';
   static const String maskGroup2 = 'assets/imgs/Mask_Group.png';
   static const String maskGroup3 = 'assets/imgs/Mask_Group3.png';
+  static const String maskGroup4 = 'assets/imgs/Mask_Group4.png';
   static const String ambulance = 'assets/imgs/ambulance.svg';
   static const String bell = 'assets/imgs/bell.svg';
   static const String bookAdd = 'assets/imgs/book-add.svg';
