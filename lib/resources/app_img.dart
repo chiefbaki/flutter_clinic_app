@@ -21,9 +21,12 @@ class AppImg {
   static const String doc1 = 'assets/imgs/doc1.png';
   static const String doc2 = 'assets/imgs/doc2.png';
   static const String doc3 = 'assets/imgs/doc3.png';
+  static const String envelope = 'assets/imgs/envelope.svg';
   static const String eyedropper = 'assets/imgs/eyedropper.svg';
   static const String favorite = 'assets/imgs/favorite.svg';
+  static const String locationPlus = 'assets/imgs/location-plus.svg';
   static const String location = 'assets/imgs/location.svg';
+  static const String phone = 'assets/imgs/phone.svg';
   static const String settings = 'assets/imgs/settings.svg';
   static const String spreadsheet = 'assets/imgs/spreadsheet.svg';
   static const String userPin = 'assets/imgs/user-pin.svg';

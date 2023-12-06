@@ -51,7 +51,7 @@ abstract class DoctorsData {
 """,
         phoneNumber: "+996 555 89 39 54\n+996 771 29 55 22",
         email: "akylbekov.ch@example.com",
-        address: "г. Бишкек, ул. Московская, 224, клиника “Медикал Нео”",
+        address: "г. Бишкек, ул. Московская, 224,\nклиника “Медикал Нео”",
         feedback: [
           FeedbackModel(
               name: "Айзан Алишерова",
@@ -85,7 +85,7 @@ abstract class DoctorsData {
 """,
         phoneNumber: "+996 555 89 39 54\n+996 771 29 55 22",
         email: "akylbekov.ch@example.com",
-        address: "г. Бишкек, ул. Московская, 224, клиника “Медикал Нео”",
+        address: "г. Бишкек, ул. Московская, 224,\nклиника “Медикал Нео”",
         feedback: [
           FeedbackModel(
               name: "Айзан Алишерова",
@@ -119,7 +119,7 @@ abstract class DoctorsData {
 """,
         phoneNumber: "+996 555 89 39 54\n+996 771 29 55 22",
         email: "akylbekov.ch@example.com",
-        address: "г. Бишкек, ул. Московская, 224, клиника “Медикал Нео”",
+        address: "г. Бишкек, ул. Московская, 224,\nклиника “Медикал Нео”",
         feedback: [
           FeedbackModel(
               name: "Айзан Алишерова",
@@ -152,7 +152,7 @@ abstract class DoctorsData {
 """,
         phoneNumber: "+996 555 89 39 54\n+996 771 29 55 22",
         email: "akylbekov.ch@example.com",
-        address: "г. Бишкек, ул. Московская, 224, клиника “Медикал Нео”",
+        address: "г. Бишкек, ул. Московская, 224,\nклиника “Медикал Нео”",
         feedback: [
           FeedbackModel(
               name: "Айзан Алишерова",
@@ -185,7 +185,7 @@ abstract class DoctorsData {
 """,
         phoneNumber: "+996 555 89 39 54\n+996 771 29 55 22",
         email: "akylbekov.ch@example.com",
-        address: "г. Бишкек, ул. Московская, 224, клиника “Медикал Нео”",
+        address: "г. Бишкек, ул. Московская, 224,\nклиника “Медикал Нео”",
         feedback: [
           FeedbackModel(
               name: "Айзан Алишерова",
@@ -218,7 +218,7 @@ abstract class DoctorsData {
 """,
         phoneNumber: "+996 555 89 39 54\n+996 771 29 55 22",
         email: "akylbekov.ch@example.com",
-        address: "г. Бишкек, ул. Московская, 224, клиника “Медикал Нео”",
+        address: "г. Бишкек, ул. Московская, 224,\nклиника “Медикал Нео”",
         feedback: [
           FeedbackModel(
               name: "Айзан Алишерова",
@@ -251,7 +251,7 @@ abstract class DoctorsData {
 """,
         phoneNumber: "+996 555 89 39 54\n+996 771 29 55 22",
         email: "akylbekov.ch@example.com",
-        address: "г. Бишкек, ул. Московская, 224, клиника “Медикал Нео”",
+        address: "г. Бишкек, ул. Московская, 224,\nклиника “Медикал Нео”",
         feedback: [
           FeedbackModel(
               name: "Айзан Алишерова",
@@ -284,7 +284,7 @@ abstract class DoctorsData {
 """,
         phoneNumber: "+996 555 89 39 54\n+996 771 29 55 22",
         email: "akylbekov.ch@example.com",
-        address: "г. Бишкек, ул. Московская, 224, клиника “Медикал Нео”",
+        address: "г. Бишкек, ул. Московская, 224,\nклиника “Медикал Нео”",
         feedback: [
           FeedbackModel(
               name: "Айзан Алишерова",

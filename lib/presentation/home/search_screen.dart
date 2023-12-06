@@ -195,6 +195,9 @@ class _SearchScreenState extends State<SearchScreen> {
                             context,
                             MaterialPageRoute(
                                 builder: (context) => AboutDoctor(
+                                  email: DoctorsData.doctorsData[index].email,
+                                  address: DoctorsData.doctorsData[index].address,
+                                    phoneNumber: DoctorsData.doctorsData[index].phoneNumber,
                                     name: DoctorsData.doctorsData[index].name,
                                     specialty: DoctorsData
                                         .doctorsData[index].specialty,

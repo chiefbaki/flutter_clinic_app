@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_6/presentation/home/about_doctor_tab.dart/about_page.dart';
+import 'package:flutter_application_6/presentation/home/about_doctor_tab.dart/location_screen.dart';
 import 'package:flutter_application_6/presentation/theme/app_colors.dart';
 import 'package:flutter_application_6/presentation/theme/app_fonts.dart';
 import 'package:flutter_application_6/presentation/widgets/button/leading_btn.dart';
@@ -14,13 +15,19 @@ class AboutDoctor extends StatelessWidget {
   final double raiting;
   final String info;
   final String img;
+  final String phoneNumber;
+  final String address;
+  final String email;
   const AboutDoctor(
       {super.key,
       required this.name,
       required this.specialty,
       required this.raiting,
       required this.info,
-      required this.img});
+      required this.img,
+      required this.phoneNumber,
+      required this.address,
+      required this.email});
 
   @override
   Widget build(BuildContext context) {
@@ -110,7 +117,7 @@ class AboutDoctor extends StatelessWidget {
                       TabBar(
                         indicatorColor: AppColors.indicatorColor,
                         indicatorWeight: 3.0,
-                        unselectedLabelColor: Color(0xff4683D6),
+                        unselectedLabelColor: const Color(0xff4683D6),
                         labelColor: AppColors.btnColor, tabs: [
                         Tab(
                           icon: SvgPicture.asset(AppImg.userPin),
@@ -128,9 +135,7 @@ class AboutDoctor extends StatelessWidget {
                       Expanded(
                         child: TabBarView(children: [
                           About(about: info),
-                          Scaffold(
-                            body: Center(child: Text("1")),
-                          ),
+                          LocationScreen(phone: phoneNumber, email: email, address: address,),
                           Scaffold(
                             body: Center(child: Text("1")),
                           ),
